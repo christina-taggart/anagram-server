@@ -1,10 +1,9 @@
 <div class="container">
   <p>Show a list of anagrams for "<%= @word %>"</p>
-  <p>There are <%= @output_words.count %> angrams.</p>
+  <p>There are <%= @anagram_matches.count %> angrams.</p>
   <ul>
-    <% @output_words.each do |word| %>
-
-    <li><%= word %></li>
+    <% @anagram_matches.each do |match| %>
+      <li><%= match %></li>
     <% end %>
   </ul>
 </div>

@@ -1,9 +1,8 @@
 class Word < ActiveRecord::Base
-
-  def anagrams(user_word)
-    word = self.word.downcase.split("").sort
-    user = user_word.downcase.split("").sort
-    word.join("") == user.join("")
+  def self.anagrams(user_word)
+    user_sorted = user_word.downcase.split("").sort
+    Word.all.select do |word|
+      word.word if word.sorted == user_sorted.join("")
+    end
   end
-
 end

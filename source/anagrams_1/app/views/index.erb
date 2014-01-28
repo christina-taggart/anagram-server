@@ -1,3 +1,10 @@
 <div class="container">
   <p>Show a list of anagrams for "<%= @word %>"</p>
+  <p>There are <%= @output_words.count %> angrams.</p>
+  <ul>
+    <% @output_words.each do |word| %>
+
+    <li><%= word %></li>
+    <% end %>
+  </ul>
 </div>

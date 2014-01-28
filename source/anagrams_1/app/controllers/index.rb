@@ -1,5 +1,9 @@
 get '/:word' do
-  # Look in app/views/index.erb
   @word = params[:word]
   erb :index
+end
+
+post '/get_anagram' do
+  word = params[:user_input]
+  word.anagrams
 end

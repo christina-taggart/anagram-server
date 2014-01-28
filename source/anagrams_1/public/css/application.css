@@ -1,9 +1,18 @@
 .container {
+  background-color: #FFFFCC;
+  font-color: #a84343;
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 5px dotted green;
 }
 th {
   text-align: left;
+}
+
+body {
+  background-color: #7A8B8B
 }

@@ -1,3 +1,7 @@
 <div class="container">
-  <p>Show a list of anagrams for "<%= @word %>"</p>
+  <form action="/word" method="post">
+    Input a word to find the anagrams:
+    <input type="text" name="user_word">
+    <input type="submit" value="Find">
+  </form>
 </div>

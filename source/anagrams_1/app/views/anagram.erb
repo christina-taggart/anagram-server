@@ -1,3 +1,5 @@
 <div class="container">
-  <p>Show a list of anagrams for "<%= @word %>"</p>
+  <% @anagram.each do |anagram| %>
+  <p><%= anagram.text %></p>
+  <% end %>
 </div>

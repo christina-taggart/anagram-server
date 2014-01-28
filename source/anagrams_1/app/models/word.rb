@@ -12,17 +12,3 @@ class Word < ActiveRecord::Base
     anagrams
   end
 end
-
-p Word.anagrams("star")
-
-# class Word < ActiveRecord::Base
-#   def self.anagrams(word)
-#     anagrams = []
-#     Word.all.select do |test|
-#       if test.text.split("").sort.join == word.split("").sort.join
-#         anagrams << test
-#       end
-#     end
-#     p anagrams
-#   end
-# end

@@ -1,3 +1,13 @@
 <div class="container">
-  <p>Show a list of anagrams for "<%= @word %>"</p>
+  <p>Anagrams for "<%= @word %>"</p>
+  <% if @anagrams %>
+    <%= erb :anagrams %>
+  <% end %>
+
+  <form action="/" method="post">
+    Which word do you want anagrams for?
+    <br>
+    <input type="text" name="user_input">
+    <input type="submit" value="Anagram me!">
+  </form>
 </div>

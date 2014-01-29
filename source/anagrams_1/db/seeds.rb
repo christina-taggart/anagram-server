@@ -10,7 +10,7 @@ class DictionaryImporter
   end
 
   def generate_anagrams
-    Word.all[100..-1].each do |word|
+    Word.all.each do |word|
       base_word = word.get_base_word
 
       base_word_record = BaseWord.where(name: base_word).first_or_create
@@ -24,5 +24,5 @@ end
 filename = File.expand_path('../fixtures/dictionary.txt', __FILE__)
 
 book = DictionaryImporter.new(filename)
-# p book.populate
+book.populate
 book.generate_anagrams
